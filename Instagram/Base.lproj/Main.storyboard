@@ -13,7 +13,7 @@
         <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LogInViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInViewController" id="BYZ-38-t0r" customClass="LogInViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-499" y="-7"/>
+            <point key="canvasLocation" x="-391" y="-23"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="WiQ-FV-uKo">
@@ -245,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Pd-Mo-thv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3439" y="714"/>
+            <point key="canvasLocation" x="-3997" y="714"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="xc5-VS-yhq">
@@ -314,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKN-gH-pfe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2691" y="714"/>
+            <point key="canvasLocation" x="-3271" y="714"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="YiC-bJ-b7S">
@@ -391,7 +391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Goe-qV-q8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1925" y="714"/>
+            <point key="canvasLocation" x="-2551" y="714"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Z5R-zE-xnI">
@@ -460,7 +460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HV8-K5-8dp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1178.2608695652175" y="713.83928571428567"/>
+            <point key="canvasLocation" x="-1845" y="714"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="yRn-M6-CwW">
@@ -521,7 +521,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Email adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ja-o8-9R7">
-                                <rect key="frame" x="29" y="185" width="356" height="40"/>
+                                <rect key="frame" x="29" y="186" width="356" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration" identifier="emailField"/>
@@ -529,7 +529,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ruF-xG-tID">
-                                <rect key="frame" x="29" y="249" width="356" height="40"/>
+                                <rect key="frame" x="29" y="252" width="356" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration" identifier="nameField"/>
@@ -537,7 +537,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-0g-slC">
-                                <rect key="frame" x="29" y="309" width="356" height="40"/>
+                                <rect key="frame" x="29" y="315" width="356" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration" identifier="usernameField"/>
@@ -545,7 +545,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbB-lS-mhO">
-                                <rect key="frame" x="29" y="372" width="356" height="40"/>
+                                <rect key="frame" x="29" y="382" width="356" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration" identifier="passwordField"/>
@@ -567,7 +567,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBK-bl-wES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="714"/>
+            <point key="canvasLocation" x="-391" y="714"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="xdX-Uj-oui">
@@ -643,7 +643,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6h-db-odD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-387" y="714"/>
+            <point key="canvasLocation" x="-1135" y="714"/>
         </scene>
         <!--Profile-->
         <scene sceneID="dv8-i8-0zh">
@@ -821,7 +821,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ptn-PC-OWP">
             <objects>
-                <tabBarController id="M6A-Fg-aJr" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AuthenticatedViewController" id="M6A-Fg-aJr" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="pQB-fa-atU"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fbx-dU-Jgx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -838,10 +838,10 @@
             </objects>
             <point key="canvasLocation" x="365" y="-23"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Home Feed View Controller-->
         <scene sceneID="emh-kA-X5j">
             <objects>
-                <tableViewController storyboardIdentifier="TimelineViewController" id="Itd-as-0R9" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TimelineViewController" id="Itd-as-0R9" customClass="HomeFeedViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="aD5-ZY-YOz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -961,6 +961,9 @@
                         <leftBarButtonItems>
                             <barButtonItem title="Item" image="rectangle.portrait.and.arrow.right" catalog="system" id="MuM-l2-Dnf">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="didTapLogout:" destination="Itd-as-0R9" id="DPH-OJ-X1n"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="Instagram_logo.svg" id="22Y-1h-RbD">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1091,8 +1094,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iP4-7m-OcY"/>
-        <segue reference="HvI-Un-EOK"/>
+        <segue reference="c8b-xg-v6F"/>
+        <segue reference="sqr-0M-26O"/>
         <segue reference="YrE-l2-ygG"/>
     </inferredMetricsTieBreakers>
     <resources>
