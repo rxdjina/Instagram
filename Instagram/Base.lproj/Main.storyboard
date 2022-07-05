@@ -101,7 +101,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Sign Up."/>
                                 <connections>
-                                    <segue destination="QYH-pb-H96" kind="show" identifier="signUpSegue" id="tUU-gt-CNv"/>
+                                    <segue destination="N8Y-Ok-9RU" kind="show" id="bwc-4y-EmZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRV-rb-6YR">
@@ -163,12 +163,12 @@
             </objects>
             <point key="canvasLocation" x="-499" y="-7"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="WiQ-FV-uKo">
             <objects>
-                <viewController id="QYH-pb-H96" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="QYH-pb-H96" customClass="SignUpViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bq0-Aa-Qai">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUY-96-wrX">
@@ -182,6 +182,7 @@
                                 <rect key="frame" x="29" y="210" width="356" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration" identifier="emailField"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -219,7 +220,7 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="4b3-3O-vxY" kind="show" id="g2i-f2-rM5"/>
+                                    <action selector="emailToNameButton:" destination="QYH-pb-H96" eventType="touchUpInside" id="lrK-1V-a2o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSk-Rf-rNz">
@@ -230,7 +231,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Skip"/>
                                 <connections>
-                                    <segue destination="4b3-3O-vxY" kind="show" id="Efd-np-QlQ"/>
+                                    <segue destination="4b3-3O-vxY" kind="show" identifier="skipToNameSegue" id="Efd-np-QlQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -239,17 +240,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="wpN-XP-7OI"/>
                     <connections>
-                        <outlet property="emailField" destination="oeD-eI-SQc" id="xse-gn-ENV"/>
+                        <segue destination="4b3-3O-vxY" kind="show" identifier="emailToNameSegue" id="YrE-l2-ygG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Pd-Mo-thv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3439" y="714"/>
         </scene>
-        <!--Log In View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="xc5-VS-yhq">
             <objects>
-                <viewController id="4b3-3O-vxY" customClass="LogInViewController" sceneMemberID="viewController">
+                <viewController id="4b3-3O-vxY" customClass="SignUpViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CZL-Eg-ggb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -258,6 +259,7 @@
                                 <rect key="frame" x="29" y="210" width="356" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nameField"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -271,7 +273,8 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="YFT-ep-z6S" kind="show" id="CQ4-R2-PVE"/>
+                                    <action selector="nameToPasswordButton:" destination="4b3-3O-vxY" eventType="touchUpInside" id="2no-wo-5Ta"/>
+                                    <segue destination="YFT-ep-z6S" kind="show" identifier="nameToPasswordSegue" id="CQ4-R2-PVE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Your Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9h-XX-rf2">
@@ -308,18 +311,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="MMa-CF-SYM"/>
-                    <connections>
-                        <outlet property="nameField" destination="QdT-ey-G2W" id="RY3-u4-OUt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKN-gH-pfe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2691" y="714"/>
         </scene>
-        <!--Log In View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="YiC-bJ-b7S">
             <objects>
-                <viewController id="YFT-ep-z6S" customClass="LogInViewController" sceneMemberID="viewController">
+                <viewController id="YFT-ep-z6S" customClass="SignUpViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dRD-4p-NMC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,13 +345,15 @@
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="hdR-UA-2G4" kind="show" id="fWI-79-nrW"/>
+                                            <action selector="passwordToUsernameButton:" destination="YFT-ep-z6S" eventType="touchUpInside" id="f3T-Hf-1PV"/>
+                                            <segue destination="hdR-UA-2G4" kind="show" identifier="passwordToUsernameSegue" id="fWI-79-nrW"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-hQ-OZS">
                                         <rect key="frame" x="29" y="210" width="356" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="passwordField"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -386,18 +388,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="chm-HS-w4e"/>
-                    <connections>
-                        <outlet property="passwordField" destination="Aq0-hQ-OZS" id="tVO-wA-res"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Goe-qV-q8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1925" y="714"/>
         </scene>
-        <!--Log In View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="Z5R-zE-xnI">
             <objects>
-                <viewController id="hdR-UA-2G4" customClass="LogInViewController" sceneMemberID="viewController">
+                <viewController id="hdR-UA-2G4" customClass="SignUpViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aOz-ZQ-HNs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -413,6 +412,7 @@
                                 <rect key="frame" x="29" y="210" width="356" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration" identifier="usernameField"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -426,7 +426,8 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="N8Y-Ok-9RU" kind="show" id="VXC-Qu-dXL"/>
+                                    <action selector="usernameToSignUpButton:" destination="hdR-UA-2G4" eventType="touchUpInside" id="U7Y-25-5bS"/>
+                                    <segue destination="Y4V-xU-MTl" kind="show" identifier="usernameToSignUpSegue" id="o27-CX-AaF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBz-HM-oLI">
@@ -456,9 +457,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cvi-pd-NQK"/>
-                    <connections>
-                        <outlet property="usernameField" destination="PqH-YJ-EQA" id="GAu-IR-Whx"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HV8-K5-8dp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -519,23 +517,133 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="signUpButton:" destination="ENX-wh-9ut" eventType="touchUpInside" id="XDq-ib-zVi"/>
-                                    <action selector="signUpButton:" destination="N8Y-Ok-9RU" eventType="touchUpInside" id="tFB-pg-BJm"/>
+                                    <action selector="signUpButton:" destination="N8Y-Ok-9RU" eventType="touchUpInside" id="F49-bD-8o1"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Email adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ja-o8-9R7">
+                                <rect key="frame" x="29" y="185" width="356" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration" identifier="emailField"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ruF-xG-tID">
+                                <rect key="frame" x="29" y="249" width="356" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nameField"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-0g-slC">
+                                <rect key="frame" x="29" y="309" width="356" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration" identifier="usernameField"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbB-lS-mhO">
+                                <rect key="frame" x="29" y="372" width="356" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration" identifier="passwordField"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SuP-94-kwO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="BsR-Rf-vfj"/>
                     <connections>
-                        <segue destination="M6A-Fg-aJr" kind="show" identifier="signUpSegue" id="KSX-mX-3Fr"/>
+                        <outlet property="emailField" destination="2ja-o8-9R7" id="aB4-qc-vL1"/>
+                        <outlet property="nameField" destination="ruF-xG-tID" id="tdc-4z-v7E"/>
+                        <outlet property="passwordField" destination="RbB-lS-mhO" id="NBP-ve-zQ2"/>
+                        <outlet property="usernameField" destination="kTQ-0g-slC" id="gfE-zc-cRS"/>
+                        <segue destination="M6A-Fg-aJr" kind="show" identifier="signUpSegue" id="HvI-Un-EOK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBK-bl-wES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="ENX-wh-9ut" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-403" y="714"/>
+            <point key="canvasLocation" x="364" y="714"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="xdX-Uj-oui">
+            <objects>
+                <viewController id="Y4V-xU-MTl" customClass="SignUpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vdU-r7-fzM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="hbn-rW-Mj4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="788"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign up as username?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrP-m2-74A">
+                                        <rect key="frame" x="48" y="81" width="318" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You can always change your username later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2n-XW-QND">
+                                        <rect key="frame" x="29" y="125" width="356" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By signing Sign up, you agree to our Terms, Data Policy and Cookies Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOw-2g-TmB">
+                                        <rect key="frame" x="29" y="666" width="356" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xs-Xb-onG">
+                                        <rect key="frame" x="97" y="791" width="166" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.58823531870000001" green="0.59215688710000003" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUg-5D-72f">
+                                        <rect key="frame" x="265" y="791" width="52" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="tintColor" red="0.2588235438" green="0.58431375029999999" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Sign In."/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HN-Dw-7uR">
+                                        <rect key="frame" x="29" y="728" width="356" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.5411764979" green="0.77647060160000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="signUp"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sign Up">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signUpButton:" destination="Y4V-xU-MTl" eventType="touchUpInside" id="LnH-jk-qk7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="qlM-cU-pAg"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Yr-qf-hHL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b7L-Ia-Hxd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6h-db-odD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-387" y="714"/>
         </scene>
         <!--Profile-->
         <scene sceneID="dv8-i8-0zh">
@@ -728,7 +836,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTb-GL-RuD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371" y="9"/>
+            <point key="canvasLocation" x="365" y="-23"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="emh-kA-X5j">
@@ -984,8 +1092,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iP4-7m-OcY"/>
-        <segue reference="KSX-mX-3Fr"/>
-        <segue reference="Efd-np-QlQ"/>
+        <segue reference="HvI-Un-EOK"/>
+        <segue reference="YrE-l2-ygG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Instagram_logo.svg" width="1280" height="457"/>
