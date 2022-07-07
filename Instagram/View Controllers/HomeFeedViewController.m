@@ -100,8 +100,7 @@
     [formattedCaption addAttribute: NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Bold" size:15.0] range:captionRange];
     [cell.captionLabel setAttributedText: formattedCaption];
     
-//    cell.captionLabel.text = [NSString stringWithFormat:@"%@ %@", user.username, post.caption];
-    
+    // Likes Count
     cell.likesCountLabel.text = [NSString stringWithFormat:@"%@ likes", post.likeCount];
     
     // Comments
@@ -112,8 +111,9 @@
     }
     
     // Post Image
-    PFFileObject *postImage = user[@"profilePicture"];
+    PFFileObject *postImage = post.image;
     NSData *postImageData = postImage.getData;
+    cell.postImage.image = nil;
     cell.postImage.image = [UIImage imageWithData:postImageData];
     
     
