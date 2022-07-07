@@ -21,11 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSString *username = self.usernameField.text;
-    NSString *password = self.passwordField.text;
-    
-    NSLog(@"%@, %@", username, password);
 }
 
 - (void)registerUser {
@@ -33,11 +28,12 @@
     PFUser *newUser = [PFUser user];
 
     // Set Properties
+    NSString *fullName = self.nameField.text;
     newUser.username = self.usernameField.text;
     newUser.password = self.passwordField.text;
+    newUser.email = [self.emailField.text lowercaseString];
+    newUser[@"firstName"] = [fullName capitalizedString];
 
-//    newUser.username = @"John";
-//    newUser.password = @"Apple";
     
     // Call Sign Up Function
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
