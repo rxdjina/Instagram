@@ -11,6 +11,7 @@
 #import "LogInViewController.h"
 #import "SceneDelegate.h"
 #import "PostCell.h"
+#import "DateTools.h"
 
 
 @interface HomeFeedViewController ()
@@ -110,12 +111,14 @@
         cell.commentsCountLabel.text = @"";
     }
     
+    // Date Label
+    cell.timeLabel.text = [post.createdAt timeAgoSinceNow];
+    
     // Post Image
     PFFileObject *postImage = post.image;
     NSData *postImageData = postImage.getData;
     cell.postImage.image = nil;
     cell.postImage.image = [UIImage imageWithData:postImageData];
-    
     
     // Author Image
     PFFileObject *authorImage = user[@"profilePicture"];
@@ -128,4 +131,4 @@
     return cell;
 }
 
-@end;
+@end

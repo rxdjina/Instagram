@@ -43,21 +43,18 @@
         [self.collectionView insertSubview:self.refreshControl atIndex:0];
         
         [self loadPosts];
-        
-        self.postCountLabel.text = [NSString stringWithFormat:@"%lu", self.arrayOfPersonalPosts.count];
-        
+
         [self.refreshControl endRefreshing];
     }
 }
 
 - (void)loadPosts {
     PFQuery *postQuery = [Post query];
-    [postQuery orderByAscending:@"createdAt"];
+    [postQuery orderByDescending:@"createdAt"];
     [postQuery includeKey:@"author"];
     [postQuery whereKey:@"author" equalTo:PFUser.currentUser];
     postQuery.limit = 20;
 
-    // fetch data asynchronously
     [postQuery findObjectsInBackgroundWithBlock:^(NSArray<Post *> * _Nullable posts, NSError * _Nullable error) {
         if (posts) {
             self.arrayOfPersonalPosts = posts;
@@ -66,6 +63,8 @@
         else {
             NSLog(@"Error loading posts: %@", error.localizedDescription);
         }
+        self.postCountLabel.text = [NSString stringWithFormat:@"%lu", self.arrayOfPersonalPosts.count];
+        
         [self.refreshControl endRefreshing];
     }];
 }
@@ -122,22 +121,20 @@
     CGFloat cellWidth =  [[UIScreen mainScreen] bounds].size.width/numberOfCellInRow;
     
     Post *post = self.arrayOfPersonalPosts[indexPath.row];
-    PFUser *user = post.author;
     
     PFFileObject *postImage = post.image;
     NSData *postImageData = postImage.getData;
     
     //
-    UIView *catView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cellWidth, cellWidth)];
+    UIView *cellView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cellWidth, cellWidth)];
 
     UIImage *image = [UIImage imageWithData:postImageData];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
 
-    imageView.frame = catView.bounds;
+    imageView.frame = cellView.bounds;
 
-    [catView addSubview:imageView];
-
-    [cell.contentView addSubview:catView];
+    [cellView addSubview:imageView];
+    [cell.contentView addSubview:cellView];
 
     return cell;
 }

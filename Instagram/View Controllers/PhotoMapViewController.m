@@ -72,10 +72,10 @@
             NSLog(@"Error: %@", error.localizedDescription);
         } else {
             NSLog(@"Sucessfully uploaded post");
-            
-            [self dismissViewControllerAnimated:YES completion:nil];
         }
     }];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {

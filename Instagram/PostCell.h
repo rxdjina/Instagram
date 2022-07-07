@@ -20,9 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *captionLabel;
 @property (strong, nonatomic) IBOutlet PFImageView  *postImage;
-@property (strong, nonatomic) IBOutlet UILabel *usernameByCaptionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *commentsCountLabel;
 @property (strong, nonatomic) IBOutlet UILabel *likesCountLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 
 @property (nonatomic, strong) Post *post;
 @property (nonatomic, strong) User *user;

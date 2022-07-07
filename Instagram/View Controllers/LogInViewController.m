@@ -29,10 +29,10 @@
 
     // Set Properties
     NSString *fullName = self.nameField.text;
-    newUser.username = self.usernameField.text;
+    newUser.username = [self.usernameField.text lowercaseString];
     newUser.password = self.passwordField.text;
     newUser.email = [self.emailField.text lowercaseString];
-    newUser[@"firstName"] = [fullName capitalizedString];
+    newUser[@"fullName"] = [fullName capitalizedString];
 
     
     // Call Sign Up Function
@@ -48,7 +48,7 @@
 }
 
 - (void)loginUser {
-    NSString *username = self.usernameField.text;
+    NSString *username = [self.usernameField.text lowercaseString];
     NSString *password = self.passwordField.text;
     
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError * error) {
