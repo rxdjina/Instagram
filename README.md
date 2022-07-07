@@ -2,7 +2,7 @@
 
 Instagram is a photo sharing app using Parse as its backend.
 
-Time spent: 1 hours spent in total
+Time spent: 46 hours spent in total
 
 ## User Stories
 
@@ -11,8 +11,8 @@ The following **required** functionality is completed:
 - [x] User can sign up to create a new account using Parse authentication
 - [x] User can log in and log out of his or her account
 - [x] The current signed in user is persisted across app restarts
-- [ ] User can take a photo, add a caption, and post it to "Instagram"
-- [ ] User can view the last 20 posts submitted to "Instagram"
+- [x] User can take a photo, add a caption, and post it to "Instagram"
+- [x] User can view the last 20 posts submitted to "Instagram"
 - [x] User can pull to refresh the last 20 posts submitted to "Instagram"
 - [x] User can tap a post to view post details, including timestamp and caption
 
@@ -20,11 +20,11 @@ The following **optional** features are implemented:
 
 - [ ] Run your app on your phone and use the camera to take the photo
 - [ ] User can load more posts once he or she reaches the bottom of the feed using infinite scrolling
-- [ ] Show the username and creation time for each post
+- [x] Show the username and creation time for each post
 - [x] User can use a Tab Bar to switch between a Home Feed tab (all posts) and a Profile tab (only posts published by the current user)
 - User Profiles:
   - [x] Allow the logged in user to add a profile photo
-  - [ ] Display the profile photo with each post
+  - [x] Display the profile photo with each post
   - [ ] Tapping on a post's username or profile photo goes to that user's profile page
 - [ ] After the user submits a new post, show a progress HUD while the post is being uploaded to Parse
 - [ ] User can comment on a post and see all comments for each post in the post details screen
@@ -44,7 +44,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-[Video Walkthrough]()
+[Video Walkthrough](https://submissions.us-east-1.linodeobjects.com/metau_ios/iB5xrp4n.gif)
 
 GIF created with [Kap](https://getkap.co/).
 
@@ -53,11 +53,18 @@ GIF created with [Kap](https://getkap.co/).
 List an 3rd party libraries, icons, graphics, or other assets you used in your app.
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
+- [Pexels](https://www.pexels.com/) - sample images for posts
 
 ## Notes
 
 Describe any challenges encountered while building the app.
-- I ran into trouble with posting user images then pulling them into a feed and displaying images onto each users proper feed.
+
+Technical Issues:
+- I ran into several issues when attempting to allow users to create a post and post it to platform. None of the posts were uploading to the database. I also ran into issues when attempting to authenticate my personal access to database.
+
+Personal Challenges:
+- While working on this project I found it challenging to implement individual user timelines.
+
 
 ## License
 
